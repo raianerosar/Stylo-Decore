@@ -23,7 +23,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Stylo Decore | Cortinas, Persianas e Papéis de Parede - Florianópolis e Região",
+    default: "Stylo Decore | Design e Produtos Personalizados",
     template: "%s | Stylo Decore",
   },
   description:
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Stylo Decore" }],
   openGraph: {
-    title: "Stylo Decore | Cortinas, Persianas e Papéis de Parede",
+    title: "Stylo Decore | Design e Produtos Personalizados",
     description:
       "Transforme seus ambientes com soluções sob medida. Mais de 20 anos de experiência em Florianópolis e Região.",
     locale: "pt_BR",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         url: "/images/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: "Stylo Decore - Cortinas, Persianas e Papéis de Parede em Florianópolis",
+        alt: "Stylo Decore - Design e Produtos Personalizados em Florianópolis",
       },
     ],
   },

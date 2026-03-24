@@ -3,8 +3,10 @@
 import { useEffect, useRef } from "react";
 import { getWhatsAppUrl } from "@/lib/constants";
 import { useParallax } from "@/hooks/useParallax";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function HeroSection() {
+  const { t } = useLanguage();
   const videoContainerRef = useParallax<HTMLDivElement>(0.4);
   const desktopVideoRef = useRef<HTMLVideoElement>(null);
 
@@ -92,25 +94,25 @@ export default function HeroSection() {
       {/* Bottom: tagline + buttons */}
       <div className="absolute bottom-12 left-0 right-0 z-10 flex flex-col items-center px-6 text-center">
         <p className="mb-1 text-sm font-semibold text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)] md:text-base">
-          Peças personalizáveis e orientação de design
+          {t("hero.title")}
         </p>
         <p className="mb-8 text-xs text-white/80 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)] md:text-sm">
-          Para ajudar você a criar uma casa bonita, funcional e com personalidade.
+          {t("hero.subtitle")}
         </p>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
-            href={getWhatsAppUrl("Olá! Gostaria de solicitar um orçamento.")}
+            href={getWhatsAppUrl(t("hero.whatsapp"))}
             target="_blank"
             rel="noopener noreferrer"
             className="brushed-gold inline-flex items-center rounded-full px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-background-dark transition-opacity hover:opacity-90"
           >
-            Solicitar Orçamento
+            {t("hero.ctaPrimary")}
           </a>
           <a
             href="#colecoes"
             className="inline-flex items-center rounded-full bg-white px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-background-dark transition-all hover:bg-background"
           >
-            Ver Coleções
+            {t("hero.ctaSecondary")}
           </a>
         </div>
       </div>

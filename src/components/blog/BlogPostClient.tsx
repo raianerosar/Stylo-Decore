@@ -131,16 +131,16 @@ export function BlogPostClient({ post, slug, relatedPosts }: Props) {
 
       case "specs":
         return (
-          <div key={i} className="my-6 overflow-hidden border border-[#B59E7D]/25">
+          <div key={i} className="my-6 overflow-hidden border border-[#95978a]/40">
             {block.rows.map((row, j) => (
               <div
                 key={j}
-                className={`flex gap-4 px-5 py-3 text-sm ${j % 2 === 0 ? "bg-white/50" : ""}`}
+                className={`flex gap-4 bg-[#95978a] px-5 py-3 text-sm ${j < block.rows.length - 1 ? "border-b border-[#7a7c70]/40" : ""}`}
               >
-                <span className="w-28 flex-shrink-0 text-xs font-bold uppercase tracking-wide text-[#584738]/45">
+                <span className="w-28 flex-shrink-0 text-xs font-bold uppercase tracking-wide text-[#221e10]">
                   {row.label}
                 </span>
-                <span className="text-[#584738]/75">{row.value}</span>
+                <span className="text-[#221e10]">{row.value}</span>
               </div>
             ))}
           </div>

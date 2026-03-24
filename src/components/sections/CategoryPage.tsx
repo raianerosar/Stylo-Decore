@@ -74,25 +74,25 @@ export default function CategoryPage({
     <div>
       {/* Hero */}
       {subcategories[0] && (
-        <div className={`relative w-full overflow-hidden${heroNaturalHeight ? "" : " min-h-[50vh] md:min-h-[65vh] lg:min-h-[70vh] bg-[#221e10]"}`}>
+        <div className={`relative w-full overflow-hidden${heroNaturalHeight ? " min-h-[50vh] md:min-h-[65vh] lg:min-h-0 bg-[#221e10] lg:bg-transparent" : " min-h-[50vh] md:min-h-[65vh] lg:min-h-[70vh] bg-[#221e10]"}`}>
           {heroNaturalHeight && heroImage ? (
             <>
-              <div className={`${heroNoMaxHeight ? "" : "max-h-[90vh] overflow-hidden "}flex items-start`}>
-              <img
-                src={heroImage}
-                alt={title}
-                className={`w-full h-auto block${heroMobileImage ? " hidden lg:block" : ""}`}
-                style={heroDesktopImageStyle}
-              />
-              </div>
-              {heroMobileImage && (
+              {/* Desktop: altura natural */}
+              <div className={`hidden lg:flex ${heroNoMaxHeight ? "" : "max-h-[90vh] overflow-hidden "}items-start`}>
                 <img
-                  src={heroMobileImage}
+                  src={heroImage}
                   alt={title}
-                  className="w-full h-auto block lg:hidden"
-                  style={heroMobileImageStyle}
+                  className="w-full h-auto block"
+                  style={heroDesktopImageStyle}
                 />
-              )}
+              </div>
+              {/* Mobile: object-cover com altura fixa */}
+              <img
+                src={heroMobileImage || heroImage}
+                alt={title}
+                className="absolute inset-0 h-full w-full object-cover lg:hidden"
+                style={heroMobileImageStyle}
+              />
             </>
           ) : heroImage ? (
             <>

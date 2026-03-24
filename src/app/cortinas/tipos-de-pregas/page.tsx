@@ -33,8 +33,10 @@ export default function TiposDePregasPage() {
         descriptionKey="cat.cortinas.pregas.description"
         introKey="cat.cortinas.pregas.intro"
         heroImage="/images/cortinas/tipos-de-pregas-hero.png"
+        heroMobileImage="/images/cortinas/tipos-de-pregas-hero-mobile.png"
         heroNaturalHeight
-        heroDesktopImageStyle={{ transform: "translateY(8%)" }}
+        heroDesktopImageStyle={{ transform: "translateY(0%)" }}
+        heroMobileImageStyle={{ objectPosition: "50% 20%" }}
         subcategories={CORTINAS_TIPOS_PREGAS}
         faqItems={CORTINAS_FAQ_KEYS}
       />

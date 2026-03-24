@@ -330,7 +330,7 @@ export default function TapetesGalleryPage() {
               {t("gallery.tapetes.cta.desc")}
             </p>
             <a
-              href={getWhatsAppUrl("Olá! Tenho interesse em tapetes e gostaria de um orçamento personalizado.")}
+              href={getWhatsAppUrl(t("gallery.tapetes.cta.whatsapp"))}
               target="_blank"
               rel="noopener noreferrer"
               className="brushed-gold inline-flex items-center rounded-full px-8 py-3 text-sm font-semibold text-background-dark transition-all hover:shadow-lg active:scale-95"
