@@ -47,10 +47,10 @@ export default function AboutSection() {
           className="relative overflow-hidden min-h-[560px] lg:min-h-0 order-2 lg:order-1 bg-[#F1EADA]"
         >
           <Image
-            src="/images/sobre/nilza.jpeg"
+            src="/images/sobre/nilza-nova.jpeg"
             alt="Nilza Terezinha Duarte Bueno"
             fill
-            className="object-contain object-top"
+            className="object-contain object-top grayscale"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </ScrollReveal>
