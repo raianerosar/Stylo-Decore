@@ -38,17 +38,17 @@ export default function AboutSection() {
         </ScrollReveal>
       </div>
 
-      {/* ── Clarice — foto esquerda, texto direita ── */}
+      {/* ── Nilza — foto esquerda, texto direita ── */}
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
 
-        {/* Foto (ordem invertida no mobile: vai abaixo do texto) */}
+        {/* Foto */}
         <ScrollReveal
           animation="left"
           className="relative overflow-hidden min-h-[560px] lg:min-h-0 order-2 lg:order-1 bg-[#F1EADA]"
         >
           <Image
-            src="/images/sobre/clarice.jpeg"
-            alt="Clarice Fontoura"
+            src="/images/sobre/nilza.jpeg"
+            alt="Nilza Terezinha Duarte Bueno"
             fill
             className="object-contain object-top"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -61,7 +61,43 @@ export default function AboutSection() {
           className="flex items-center justify-start order-1 lg:order-2"
         >
           <div className="px-8 py-16 lg:px-12 lg:py-24 max-w-md w-full">
-            {/* Role */}
+            <div className="flex items-center gap-3 mb-5">
+              <span className="block w-6 h-px bg-[#f1bf27]" />
+              <p
+                className="text-[10px] font-semibold uppercase tracking-[0.4em] text-[#f1bf27]"
+                style={{ fontFamily: "Manrope, sans-serif" }}
+              >
+                {t("about.nilza.role")}
+              </p>
+            </div>
+            <h3
+              className="text-4xl md:text-5xl text-[#584738] leading-[1.1] mb-7"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Nilza
+              <br />
+              <span className="italic text-[#B59E7D]">Duarte</span>
+            </h3>
+            <div className="w-12 h-[1.5px] bg-[#f1bf27] mb-7" />
+            <p
+              className="text-[#584738] text-[15px] leading-[1.9] font-normal"
+              style={{ fontFamily: "Manrope, sans-serif" }}
+            >
+              {t("about.nilza.bio")}
+            </p>
+          </div>
+        </ScrollReveal>
+      </div>
+
+      {/* ── Clarice — texto esquerda, foto direita ── */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+
+        {/* Texto */}
+        <ScrollReveal
+          animation="left"
+          className="flex items-center justify-end order-1 lg:order-1 bg-[#ede8dc]"
+        >
+          <div className="px-8 py-16 lg:px-12 lg:py-24 max-w-md w-full">
             <div className="flex items-center gap-3 mb-5">
               <span className="block w-6 h-px bg-[#f1bf27]" />
               <p
@@ -71,7 +107,6 @@ export default function AboutSection() {
                 {t("about.clarice.role")}
               </p>
             </div>
-            {/* Nome */}
             <h3
               className="text-4xl md:text-5xl text-[#584738] leading-[1.1] mb-7"
               style={{ fontFamily: "'Playfair Display', serif" }}
@@ -80,9 +115,7 @@ export default function AboutSection() {
               <br />
               <span className="italic text-[#B59E7D]">Fontoura</span>
             </h3>
-            {/* Linha separadora */}
             <div className="w-12 h-[1.5px] bg-[#f1bf27] mb-7" />
-            {/* Bio */}
             <p
               className="text-[#584738] text-[15px] leading-[1.9] font-normal"
               style={{ fontFamily: "Manrope, sans-serif" }}
@@ -90,6 +123,20 @@ export default function AboutSection() {
               {t("about.clarice.bio")}
             </p>
           </div>
+        </ScrollReveal>
+
+        {/* Foto */}
+        <ScrollReveal
+          animation="right"
+          className="relative overflow-hidden min-h-[560px] lg:min-h-0 order-2 lg:order-2 bg-[#ede8dc]"
+        >
+          <Image
+            src="/images/sobre/clarice.jpeg"
+            alt="Clarice Fontoura"
+            fill
+            className="object-contain object-top"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
         </ScrollReveal>
       </div>
 

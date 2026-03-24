@@ -67,6 +67,16 @@ const ESTILOS = [
         ],
       },
       {
+        name: "Klein",
+        images: [
+          { src: "/images/tapetes/klein-07.png" },
+          { src: "/images/tapetes/klein-01.png" },
+          { src: "/images/tapetes/klein-02.png" },
+          { src: "/images/tapetes/klein-03.png" },
+          { src: "/images/tapetes/klein-06.png" },
+        ],
+      },
+      {
         name: "Relex N",
         images: [
           { src: "/images/tapetes/relex-n-01.png" },
