@@ -91,7 +91,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "home.vals.v2.title": "Orientação de design",
     "home.vals.v2.text": "Apoio profissional para ajudar você a fazer as melhores escolhas.",
     "home.vals.v3.title": "Curadoria",
-    "home.vals.v3.text": "Peças selecionadas para criar ambientes harmoniosos e bem resolvidos.",
+    "home.vals.v3.text": "Peças selecionadas para criar ambientes harmoniosos, personalizados e bem resolvidos.",
 
     // Home — Service
     "home.service.eyebrow": "Formas de Atendimento",
@@ -161,7 +161,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "contact.location": "Localização",
     "contact.hours": "Atendimento",
     "contact.quote":
-      '"Cada detalhe conta — do tecido escolhido à instalação final. Nosso compromisso é transformar o seu espaço com sofisticação."',
+      '"Cada detalhe conta — do tecido escolhido à instalação final. Nosso compromisso é personalizar o seu ambiente e expressar sua essência com precisão e exclusividade."',
     "contact.whatsappDirect": "Ir direto ao WhatsApp",
     "contact.fieldName": "Nome completo *",
     "contact.namePlaceholder": "Seu nome",
@@ -234,7 +234,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // Category pages — headlines, descriptions, intros
     "cat.cortinas.headline": "Elegância Natural",
-    "cat.cortinas.description": "Tecidos nobres que transformam ambientes. Descubra nossos modelos de cortinas sob medida para o seu espaço.",
+    "cat.cortinas.description": "Tecidos com texturas, cores e acabamentos únicos que transformam ambientes. Descubra nossos modelos de cortinas personalizadas e sob medida para o seu espaço.",
     "cat.cortinas.intro": "Cortinas são sinônimo de elegância e sofisticação, com grande influência no resultado estético e no aconchego dos ambientes. Trabalhamos com tecidos nobres e soluções sob medida para transformar cada espaço com exclusividade.",
     "cat.persianas.headline": "Controle de Luz",
     "cat.persianas.description": "Controle de luz com elegância e praticidade. Descubra nossas persianas sob medida para cada ambiente.",
@@ -244,7 +244,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "cat.papeis.intro": "Papéis de parede são uma forma sofisticada de personalizar ambientes. Trabalhamos com coleções exclusivas que vão do artesanal ao contemporâneo, sempre com aplicação profissional.",
     "cat.cortinas.pregas.headline": "Elegância com Caimento",
     "cat.cortinas.pregas.description": "Descubra o tipo de prega ideal para transformar sua cortina em peça de design.",
-    "cat.cortinas.pregas.intro": "A escolha da prega define o caráter de toda a cortina — do clássico ao contemporâneo. Cada tipo oferece um caimento e uma personalidade únicas para o seu ambiente.",
+    "cat.cortinas.pregas.intro": "A escolha da prega define o caráter de toda a cortina — do clássico ao contemporâneo, do rústico ao requinte. Cada tipo confere um caimento e uma identidade única ao ambiente.",
     "cat.cortinas.acabamento.headline": "Detalhes que Fazem a Diferença",
     "cat.cortinas.acabamento.description": "O acabamento define a funcionalidade e o refinamento final da sua cortina.",
     "cat.cortinas.acabamento.intro": "Barra larga ou forro blackout — cada acabamento tem um propósito e uma estética própria. Escolha o que melhor combina com o seu espaço e necessidade de luz.",
@@ -295,6 +295,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "almofadas.hero.subtitle": "Combinações sob medida para cada ambiente da sua casa.",
     "almofadas.intro": "Almofadas são detalhes que transformam qualquer ambiente, adicionando cor, textura e personalidade. Criamos combinações exclusivas com tecidos selecionados e acabamentos artesanais, adaptados ao estilo de cada cliente.",
     "almofadas.kits.title": "Kits de Almofadas",
+    "almofadas.combinacao.title": "Monte a sua combinação de almofadas",
     "almofadas.sofa.title": "Combinação para Sofá",
     "almofadas.cama.title": "Combinação para Cama",
     "almofadas.kit1": "Kit Sala Clássico",
@@ -431,16 +432,16 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
       "Após o contato inicial, agendamos uma visita técnica no seu endereço. Nossa consultora vai até você com o mostruário completo, realiza a medição com precisão milimétrica e apresenta as melhores opções para o seu projeto — tudo sem custo adicional.",
     "faq.q3": "Qual é o prazo de entrega e instalação?",
     "faq.a3":
-      "O prazo médio é de 15 a 25 dias úteis após a aprovação do orçamento e confirmação do pedido. Projetos maiores ou produtos especiais podem ter prazos diferentes, sempre informados com antecedência.",
+      "O prazo médio é de 15 a 25 dias a depender da urgência e demanda específica de cada cliente. Projetos maiores ou produtos especiais podem ter prazos diferentes, informados e combinados com o cliente, antecipadamente.",
     "faq.q4": "A instalação está inclusa no preço?",
     "faq.a4":
       "Sim! A instalação profissional está inclusa em todos os projetos sob medida. Nossa equipe cuida de todo o processo, do início ao acabamento final, sem nenhum custo extra para você.",
     "faq.q5": "Posso solicitar um orçamento sem compromisso?",
     "faq.a5":
-      "Com certeza. Tanto o orçamento online (via WhatsApp) quanto a consultoria presencial são sem compromisso. Você recebe todas as informações e decide com calma, no seu tempo.",
+      "Com certeza. O orçamento online e a consultoria online (via WhatsApp e reunião pré-agendada) são sem compromisso ou investimento. Já a consultoria presencial tem um valor simbólico que será revertido em produtos posteriormente.",
     "faq.q6": "Vocês trabalham com produtos totalmente sob medida?",
     "faq.a6":
-      "Sim, todos os nossos produtos são confeccionados sob medida para o seu ambiente específico. Isso garante caimento perfeito, acabamento impecável e um resultado muito mais sofisticado do que produtos prontos.",
+      "Sim, todos os nossos produtos podem ser personalizados, trabalhamos com as medidas padrões, mas também temos a opção de personalizar cada um dos nossos itens. Desenvolvendo produtos com resultados únicos e de acordo com o DNA de cada um dos nossos clientes.",
     "faq.q7": "Como escolho o tecido certo para cada cômodo?",
     "faq.a7":
       "Nossa consultora orienta você em cada escolha levando em conta a entrada de luz desejada, a privacidade necessária, a decoração existente e o estilo que você quer alcançar. Levamos amostras físicas para que você veja as opções no ambiente real antes de decidir.",
@@ -645,10 +646,8 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "faq.almofadas.a1": "Sim! Trabalhamos com almofadas sob medida em diversos formatos — quadradas, retangulares, redondas e cilíndricas. Na consultoria apresentamos as opções de tamanho e forma mais adequadas para cada ambiente e sofá.",
     "faq.almofadas.q2": "Quais tecidos estão disponíveis para as almofadas?",
     "faq.almofadas.a2": "Trabalhamos com uma ampla seleção de tecidos: veludo, linho, algodão, jacquard e tecidos com tratamento anti-manchas. Cada tecido tem características distintas de toque, durabilidade e manutenção — ajudamos você a escolher o ideal para o seu projeto.",
-    "faq.almofadas.q3": "O enchimento das almofadas é incluso?",
-    "faq.almofadas.a3": "Sim! Oferecemos opções de enchimento de alta qualidade: silicone siliconado, fibra antialérgica e espuma de alta densidade. O enchimento é escolhido conforme o uso e o nível de conforto desejado para cada ambiente.",
-    "faq.almofadas.q4": "Como cuidar das almofadas decorativas no dia a dia?",
-    "faq.almofadas.a4": "A maioria das capas pode ser removida e lavada conforme as instruções do tecido. Recomendamos aspiração regular e arejamento periódico do enchimento. Fornecemos orientações específicas de cuidado para cada material no momento da entrega.",
+    "faq.almofadas.q3": "Como cuidar das almofadas decorativas no dia a dia?",
+    "faq.almofadas.a3": "A maioria das capas pode ser removida e lavada conforme as instruções do tecido. Recomendamos aspiração regular e arejamento periódico do enchimento. Fornecemos orientações específicas de cuidado para cada material no momento da entrega.",
 
     // FAQ — Móveis Sob Medida
     "faq.moveis.q1": "Vocês fabricam móveis sob medida para qualquer ambiente?",
@@ -720,7 +719,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "gallery.tapetes.sectionEstilos": "Estilos",
     "gallery.tapetes.cta.eyebrow": "Atendimento Personalizado",
     "gallery.tapetes.cta.title": "Encontre o tapete ideal para o seu espaço",
-    "gallery.tapetes.cta.desc": "Nossa especialista ajuda a escolher o estilo, formato e medida perfeitos para o seu ambiente.",
+    "gallery.tapetes.cta.desc": "Nossa especialista ajuda a escolher o estilo, formato e medida perfeitos para o seu ambiente. Verifique os modelos disponíveis.",
     "gallery.tapetes.style.organico": "Orgânico",
     "gallery.tapetes.cta.whatsapp": "Olá! Tenho interesse em tapetes e gostaria de um orçamento personalizado.",
 
@@ -1025,6 +1024,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "almofadas.hero.subtitle": "Tailor-made combinations for every room in your home.",
     "almofadas.intro": "Cushions are details that transform any space, adding colour, texture and personality. We create exclusive combinations with selected fabrics and handcrafted finishes, tailored to each client's style.",
     "almofadas.kits.title": "Cushion Kits",
+    "almofadas.combinacao.title": "Build your cushion combination",
     "almofadas.sofa.title": "Sofa Combination",
     "almofadas.cama.title": "Bed Combination",
     "almofadas.kit1": "Classic Living Room Kit",
@@ -1755,6 +1755,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "almofadas.hero.subtitle": "Combinaciones a medida para cada ambiente de su hogar.",
     "almofadas.intro": "Los cojines son detalles que transforman cualquier ambiente, añadiendo color, textura y personalidad. Creamos combinaciones exclusivas con telas seleccionadas y acabados artesanales, adaptados al estilo de cada cliente.",
     "almofadas.kits.title": "Kits de Cojines",
+    "almofadas.combinacao.title": "Crea tu combinación de cojines",
     "almofadas.sofa.title": "Combinación para Sofá",
     "almofadas.cama.title": "Combinación para Cama",
     "almofadas.kit1": "Kit Salón Clásico",

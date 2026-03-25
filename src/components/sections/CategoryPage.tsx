@@ -19,6 +19,7 @@ interface SubcategoryItem {
   imagePosition?: string;
   description: string;
   descriptionKey?: string;
+  lightboxCover?: boolean;
 }
 
 interface CategoryPageProps {
@@ -63,7 +64,7 @@ export default function CategoryPage({
   disableLinks,
 }: CategoryPageProps) {
   const { t } = useLanguage();
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string; cover?: boolean } | null>(null);
   const resolvedTitle = titleKey ? t(titleKey) : title;
   const resolvedHeadline = headlineKey ? t(headlineKey) : headline;
   const resolvedDescription = descriptionKey ? t(descriptionKey) : description;
@@ -161,7 +162,7 @@ export default function CategoryPage({
       {resolvedIntro && (
         <ScrollReveal animation="up">
           <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
-            <p className="mx-auto max-w-3xl text-center text-xl leading-relaxed text-mahogany-light md:text-2xl">
+            <p className="mx-auto max-w-3xl text-justify text-xl leading-relaxed text-mahogany-light md:text-2xl">
               {resolvedIntro}
             </p>
           </div>
@@ -202,7 +203,7 @@ export default function CategoryPage({
                   <div
                     key={item.href}
                     className="group relative overflow-hidden cursor-zoom-in"
-                    onClick={() => setLightbox({ src: item.cardImage || item.image, alt: item.name })}
+                    onClick={() => setLightbox({ src: item.cardImage || item.image, alt: item.name, cover: item.lightboxCover })}
                   >
                     {cardContent}
                   </div>
@@ -265,7 +266,7 @@ export default function CategoryPage({
       </ScrollReveal>
 
       {lightbox && (
-        <ImageLightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />
+        <ImageLightbox src={lightbox.src} alt={lightbox.alt} cover={lightbox.cover} onClose={() => setLightbox(null)} />
       )}
     </div>
   );
