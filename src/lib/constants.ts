@@ -1,6 +1,6 @@
 import type { NavItem, ContactInfo } from "@/types";
 
-export const WHATSAPP_NUMBER = "554888807882";
+export const WHATSAPP_NUMBER = "5548988807882";
 export const WHATSAPP_NUMBER_2 = "554891074707";
 
 export const WHATSAPP_DEFAULT_MESSAGE =
@@ -17,7 +17,7 @@ export function getWhatsAppUrl2(message?: string) {
 }
 
 export const CONTACT: ContactInfo = {
-  phone: "(48) 8880-7882",
+  phone: "(48) 98880-7882",
   phone2: "(48) 9107-4707",
   whatsapp: WHATSAPP_NUMBER,
   whatsapp2: WHATSAPP_NUMBER_2,

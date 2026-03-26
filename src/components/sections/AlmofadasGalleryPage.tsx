@@ -88,33 +88,32 @@ export default function AlmofadasGalleryPage() {
         </section>
       </ScrollReveal>
 
-      {/* Combinação para Sofá */}
+      {/* Monte a sua combinação de almofadas */}
       <ScrollReveal animation="up" threshold={0.05}>
         <section className="mx-auto max-w-7xl px-6 pb-16 md:pb-20">
           <h2 className="mb-8 font-serif text-3xl font-bold text-mahogany md:text-4xl">
-            {t("almofadas.sofa.title")}
+            {t("almofadas.combinacao.title")}
           </h2>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 md:gap-4">
             <PhotoCard
-              name={t("almofadas.sofa.item")}
-              image="/images/almofadas/kit-sala-boho.png"
-              onClick={() => setLightbox({ src: "/images/almofadas/kit-sala-boho.png", alt: t("almofadas.sofa.item") })}
+              name={t("almofadas.combinacao.title")}
+              image="/images/almofadas/combinacao-1.png"
+              onClick={() => setLightbox({ src: "/images/almofadas/combinacao-1.png", alt: t("almofadas.combinacao.title") })}
             />
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* Combinação para Cama */}
-      <ScrollReveal animation="up" threshold={0.05}>
-        <section className="mx-auto max-w-7xl px-6 pb-16 md:pb-20">
-          <h2 className="mb-8 font-serif text-3xl font-bold text-mahogany md:text-4xl">
-            {t("almofadas.cama.title")}
-          </h2>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 md:gap-4">
             <PhotoCard
-              name={t("almofadas.cama.item")}
-              image="/images/almofadas/combinacao-cama.png"
-              onClick={() => setLightbox({ src: "/images/almofadas/combinacao-cama.png", alt: t("almofadas.cama.item") })}
+              name={t("almofadas.combinacao.title")}
+              image="/images/almofadas/combinacao-2.png"
+              onClick={() => setLightbox({ src: "/images/almofadas/combinacao-2.png", alt: t("almofadas.combinacao.title") })}
+            />
+            <PhotoCard
+              name={t("almofadas.combinacao.title")}
+              image="/images/almofadas/combinacao-3.png"
+              onClick={() => setLightbox({ src: "/images/almofadas/combinacao-3.png", alt: t("almofadas.combinacao.title") })}
+            />
+            <PhotoCard
+              name={t("almofadas.combinacao.title")}
+              image="/images/almofadas/combinacao-4.png"
+              onClick={() => setLightbox({ src: "/images/almofadas/combinacao-4.png", alt: t("almofadas.combinacao.title") })}
             />
           </div>
         </section>

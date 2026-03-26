@@ -33,7 +33,7 @@ export default function PregaAmericanaPage() {
         descriptionKey="page.cortinas.prega-americana.desc"
         desktopHeroImage="/images/cortinas/prega-americana-hero-desktop.png"
         mobileHeroImage="/images/cortinas/prega-americana-hero-mobile.png"
-        heroDesktopClass="object-center"
+        heroDesktopClass="object-[center_30%]"
         heroMobileClass="object-center"
         mobileHeroImageStyle={{ top: '5rem', height: 'calc(100% - 5rem)' }}
         products={CORTINA_PRODUCTS["prega-americana"]}

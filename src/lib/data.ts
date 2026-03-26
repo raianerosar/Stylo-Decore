@@ -143,6 +143,8 @@ export const CORTINA_PRODUCTS: Record<string, { name: string; image: string; des
     { name: "Cortina com Ilhós - Modelo 1", image: "/images/cortinas/ilhos-01.png", desktopImage: "/images/cortinas/ilhos-01.png", category: "Cortinas" },
     { name: "Cortina com Ilhós - Modelo 2", image: "/images/cortinas/ilhos-02.png", desktopImage: "/images/cortinas/ilhos-02.png", category: "Cortinas" },
     { name: "Cortina com Ilhós - Modelo 3", image: "/images/cortinas/ilhos-03.png", desktopImage: "/images/cortinas/ilhos-03.png", category: "Cortinas" },
+    { name: "Cortina com Ilhós - Modelo 4", image: "/images/cortinas/ilhos-04.png", desktopImage: "/images/cortinas/ilhos-04.png", category: "Cortinas" },
+    { name: "Cortina com Ilhós - Modelo 5", image: "/images/cortinas/ilhos-05.png", desktopImage: "/images/cortinas/ilhos-05.png", category: "Cortinas" },
   ],
   wave: [
     { name: "Cortina Wave - Modelo 1", image: "/images/cortinas/wave-01.jpg", category: "Cortinas" },
@@ -178,6 +180,7 @@ export const CORTINA_PRODUCTS: Record<string, { name: string; image: string; des
   "cortina-franzida": [
     { name: "Cortina Franzida - Modelo 1", image: "/images/cortinas/cortina-franzida-01.png", desktopImage: "/images/cortinas/cortina-franzida-01.png", category: "Cortinas" },
     { name: "Cortina Franzida - Modelo 2", image: "/images/cortinas/cortina-franzida-02.png", desktopImage: "/images/cortinas/cortina-franzida-02.png", category: "Cortinas" },
+    { name: "Cortina Franzida - Modelo 3", image: "/images/cortinas/cortina-franzida-03.png", desktopImage: "/images/cortinas/cortina-franzida-03.png", category: "Cortinas" },
   ],
   // Tipos de Acabamento
   "barra-larga": [
@@ -185,6 +188,7 @@ export const CORTINA_PRODUCTS: Record<string, { name: string; image: string; des
     { name: "Barra Larga - Modelo 2", image: "/images/cortinas/barra-larga-02.png", desktopImage: "/images/cortinas/barra-larga-02.png", category: "Cortinas" },
     { name: "Barra Larga - Modelo 3", image: "/images/cortinas/barra-larga-03.png", desktopImage: "/images/cortinas/barra-larga-03.png", category: "Cortinas" },
     { name: "Barra Larga - Modelo 4", image: "/images/cortinas/barra-larga-04.png", desktopImage: "/images/cortinas/barra-larga-04.png", category: "Cortinas" },
+    { name: "Barra Larga - Modelo 5", image: "/images/cortinas/barra-larga-05.png", desktopImage: "/images/cortinas/barra-larga-05.png", category: "Cortinas" },
   ],
   "forro-blackout": [
     { name: "Blackout 95% — Alta Privacidade", image: "/images/cortinas/forro-blackout-01.png", desktopImage: "/images/cortinas/forro-blackout-01.png", category: "Cortinas" },
@@ -629,6 +633,7 @@ export const MOVEIS_SUBCATEGORIES = [
     image: "/images/moveis-closet-card.png",
     description: "Closets planejados com organização e elegância",
     descriptionKey: "card.moveis.closet",
+    imagePosition: "md:scale-[1.25] md:group-hover:scale-[1.35]",
   },
 ];
 

@@ -62,10 +62,10 @@ export default function Home() {
           <p className="mb-4 font-serif text-4xl font-bold uppercase tracking-[0.25em] text-primary drop-shadow-[0_2px_16px_rgba(0,0,0,0.6)] md:text-5xl lg:text-6xl">
             Stylo Decore
           </p>
-          <h1 className="mb-3 font-serif text-xl font-semibold text-white drop-shadow-md md:text-2xl lg:text-3xl">
+          <h1 className="mb-3 font-serif text-xl font-semibold text-white drop-shadow-md text-balance md:text-2xl lg:text-3xl">
             {t("hero.title")}
           </h1>
-          <p className="mx-auto mb-10 max-w-xl text-sm text-white/85 drop-shadow md:text-base">
+          <p className="mx-auto mb-10 max-w-sm text-sm text-white/85 drop-shadow text-balance md:text-base md:max-w-md">
             {t("hero.subtitle")}
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -91,10 +91,10 @@ export default function Home() {
       <section id="colecoes" className="relative -mt-10 rounded-t-[2.5rem] bg-background pt-20 md:pt-28">
         <ScrollReveal animation="up">
           <div className="mx-auto max-w-7xl px-6 mb-10">
-            <h2 className="font-sans text-3xl font-light uppercase tracking-[0.2em] text-foreground md:text-4xl">
+            <h2 className="font-sans text-lg font-light uppercase tracking-[0.4em] text-foreground md:text-xl">
               {t("home.collections")}
             </h2>
-            <div className="mt-3 h-1 w-16 rounded-full bg-primary" />
+            <div className="mt-3 h-px w-full max-w-xs bg-primary/50" />
           </div>
         </ScrollReveal>
 

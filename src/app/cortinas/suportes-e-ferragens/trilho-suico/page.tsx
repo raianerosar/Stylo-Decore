@@ -33,7 +33,7 @@ export default function TrilhoSuicoPage() {
         descriptionKey="page.cortinas.trilho-suico.desc"
         heroImage="/images/cortinas/trilho-suico-hero-desktop.png"
         mobileHeroImage="/images/cortinas/trilho-suico-hero-mobile.png"
-        heroDesktopClass="object-[center_20%]"
+        heroDesktopClass="object-center"
         heroMobileClass="object-top"
         products={CORTINA_PRODUCTS["trilho-suico"]}
         videoSrc="/videos/processo-cortinas.mp4"

@@ -71,8 +71,8 @@ export default function TrilhoMotorizadoClient() {
           fontWeight: 400,
         }}
       >
-        Abra e feche suas cortinas com um toque — pelo controle remoto,
-        pelo celular ou por voz.
+        As cortinas e persianas podem ser motorizadas. Abra e feche com um
+        toque — pelo controle remoto, pelo celular ou por voz.
       </p>
 
       {/* Video Card */}

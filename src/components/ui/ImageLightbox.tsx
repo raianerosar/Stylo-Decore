@@ -7,9 +7,10 @@ interface ImageLightboxProps {
   src: string;
   alt: string;
   onClose: () => void;
+  cover?: boolean;
 }
 
-export default function ImageLightbox({ src, alt, onClose }: ImageLightboxProps) {
+export default function ImageLightbox({ src, alt, onClose, cover }: ImageLightboxProps) {
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -46,16 +47,33 @@ export default function ImageLightbox({ src, alt, onClose }: ImageLightboxProps)
 
       {/* Image */}
       <div
-        className="relative z-10 px-4"
+        className="relative z-10"
         style={{ animation: "lb-scale-in 0.25s cubic-bezier(0.34,1.56,0.64,1)" }}
         onClick={(e) => e.stopPropagation()}
       >
-        <img
-          src={src}
-          alt={alt}
-          className="max-h-[85vh] max-w-[92vw] md:max-w-[65vw] rounded-xl object-contain shadow-2xl"
-          style={{ boxShadow: "0 25px 60px rgba(0,0,0,0.5)" }}
-        />
+        {/* Mobile: container com aspect-ratio para preencher mais espaço */}
+        <div
+          className="block md:hidden w-[92vw] rounded-xl overflow-hidden"
+          style={{ aspectRatio: "4/3", boxShadow: "0 25px 60px rgba(0,0,0,0.5)" }}
+        >
+          <img src={src} alt={alt} className="w-full h-full object-cover" />
+        </div>
+        {/* Desktop: tamanho natural com restrições */}
+        {cover ? (
+          <div
+            className="hidden md:block rounded-xl overflow-hidden"
+            style={{ width: "90vw", height: "90vh", boxShadow: "0 25px 60px rgba(0,0,0,0.5)" }}
+          >
+            <img src={src} alt={alt} className="w-full h-full object-cover" />
+          </div>
+        ) : (
+          <img
+            src={src}
+            alt={alt}
+            className="hidden md:block max-h-[95vh] max-w-[95vw] rounded-xl object-contain"
+            style={{ boxShadow: "0 25px 60px rgba(0,0,0,0.5)" }}
+          />
+        )}
       </div>
 
       <style>{`
