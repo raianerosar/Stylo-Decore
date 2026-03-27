@@ -29,14 +29,27 @@ function PhotoCard({ name, image, onClick }: { name: string; image: string; onCl
 
 export default function AlmofadasGalleryPage() {
   const { t } = useLanguage();
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
-
   const KITS = [
     { nameKey: "almofadas.kit1", image: "/images/almofadas/decorativa-1.jpeg" },
     { nameKey: "almofadas.kit2", image: "/images/almofadas/decorativa-2.jpeg" },
     { nameKey: "almofadas.kit3", image: "/images/almofadas/decorativa-3.jpeg" },
     { nameKey: "almofadas.kit4", image: "/images/almofadas/decorativa-4.jpeg" },
   ];
+
+  const COMBINACOES = [
+    "/images/almofadas/combinacao-1.png",
+    "/images/almofadas/combinacao-2.png",
+    "/images/almofadas/combinacao-3.png",
+    "/images/almofadas/combinacao-4.png",
+  ];
+
+  // Flat list: kits first, then combinações
+  const allImages = [
+    ...KITS.map((k) => ({ src: k.image, alt: t(k.nameKey) })),
+    ...COMBINACOES.map((src) => ({ src, alt: t("almofadas.combinacao.title") })),
+  ];
+
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
 
   return (
     <div>
@@ -80,9 +93,9 @@ export default function AlmofadasGalleryPage() {
             {t("almofadas.kits.title")}
           </h2>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 md:gap-4">
-            {KITS.map((item) => {
+            {KITS.map((item, i) => {
               const name = t(item.nameKey);
-              return <PhotoCard key={item.nameKey} name={name} image={item.image} onClick={() => setLightbox({ src: item.image, alt: name })} />;
+              return <PhotoCard key={item.nameKey} name={name} image={item.image} onClick={() => setLightboxIdx(i)} />;
             })}
           </div>
         </section>
@@ -95,26 +108,14 @@ export default function AlmofadasGalleryPage() {
             {t("almofadas.combinacao.title")}
           </h2>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 md:gap-4">
-            <PhotoCard
-              name={t("almofadas.combinacao.title")}
-              image="/images/almofadas/combinacao-1.png"
-              onClick={() => setLightbox({ src: "/images/almofadas/combinacao-1.png", alt: t("almofadas.combinacao.title") })}
-            />
-            <PhotoCard
-              name={t("almofadas.combinacao.title")}
-              image="/images/almofadas/combinacao-2.png"
-              onClick={() => setLightbox({ src: "/images/almofadas/combinacao-2.png", alt: t("almofadas.combinacao.title") })}
-            />
-            <PhotoCard
-              name={t("almofadas.combinacao.title")}
-              image="/images/almofadas/combinacao-3.png"
-              onClick={() => setLightbox({ src: "/images/almofadas/combinacao-3.png", alt: t("almofadas.combinacao.title") })}
-            />
-            <PhotoCard
-              name={t("almofadas.combinacao.title")}
-              image="/images/almofadas/combinacao-4.png"
-              onClick={() => setLightbox({ src: "/images/almofadas/combinacao-4.png", alt: t("almofadas.combinacao.title") })}
-            />
+            {COMBINACOES.map((src, i) => (
+              <PhotoCard
+                key={src}
+                name={t("almofadas.combinacao.title")}
+                image={src}
+                onClick={() => setLightboxIdx(KITS.length + i)}
+              />
+            ))}
           </div>
         </section>
       </ScrollReveal>
@@ -151,11 +152,17 @@ export default function AlmofadasGalleryPage() {
         </div>
       </ScrollReveal>
 
-      {lightbox && (
+      {lightboxIdx !== null && allImages[lightboxIdx] && (
         <ImageLightbox
-          src={lightbox.src}
-          alt={lightbox.alt}
-          onClose={() => setLightbox(null)}
+          src={allImages[lightboxIdx].src}
+          alt={allImages[lightboxIdx].alt}
+          onClose={() => setLightboxIdx(null)}
+          onPrev={() => setLightboxIdx((idx) => (idx! > 0 ? idx! - 1 : idx))}
+          onNext={() => setLightboxIdx((idx) => (idx! < allImages.length - 1 ? idx! + 1 : idx))}
+          hasPrev={lightboxIdx > 0}
+          hasNext={lightboxIdx < allImages.length - 1}
+          current={lightboxIdx + 1}
+          total={allImages.length}
         />
       )}
     </div>

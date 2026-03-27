@@ -122,9 +122,9 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "home.premium.label": "Premium · Presencial",
     "home.premium.title": "Consultoria Presencial Premium",
     "home.premium.desc":
-      "Nossa especialista vai até você com mostruário exclusivo, orienta na escolha de cores e tecidos, e realiza a medição com precisão milimétrica.",
+      "Nossa especialista vai até você com mostruário, orienta na escolha de cores e tecidos, e realiza a medição com precisão milimétrica.",
     "home.premium.f1": "Visita técnica no seu ambiente",
-    "home.premium.f2": "Mostruário exclusivo levado até você",
+    "home.premium.f2": "Mostruário levado até você",
     "home.premium.f3": "Orientação com profissional qualificado",
     "home.premium.f4": "Medição precisa garantida",
     "home.premium.f5":
@@ -199,7 +199,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // Footer
     "footer.desc":
-      "Há mais de 20 anos transformando ambientes com cortinas, persianas, papéis de parede e tapetes sob medida.",
+      "Há mais de 20 anos transformando ambientes com cortinas, persianas, papéis de parede, tapetes, almofadas e mobiliário sob medida.",
     "footer.excellence": "20 anos de excelência",
     "footer.products": "Produtos",
     "footer.institutional": "Institucional",
@@ -408,7 +408,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // Map Section
     "map.label": "Localização",
-    "map.title": "Onde Estamos Localizados",
+    "map.title": "Localização",
     "map.desc":
       "Nossa loja fica em Campeche, Florianópolis. Entre em contato pelo WhatsApp para tirar dúvidas ou solicitar um orçamento personalizado.",
     "map.address": "Endereço",
@@ -451,10 +451,6 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "faq.q9": "Qual a diferença entre persiana e cortina?",
     "faq.a9":
       "As persianas são estruturas rígidas (lâminas, tecido enrolável, etc.) que oferecem controle preciso da luz e são ideais para ambientes funcionais como escritórios e cozinhas. As cortinas são em tecido, conferem leveza e sofisticação, sendo muito versáteis em salas e quartos. O ideal para cada espaço depende do estilo e das necessidades — nossa consultora te ajuda nessa escolha.",
-    "faq.q10": "Como faço a manutenção das cortinas e persianas?",
-    "faq.a10":
-      "Cortinas de tecido geralmente podem ser lavadas à máquina em ciclo delicado ou à mão — orientamos conforme o material. Persianas devem ser limpas com pano úmido ou aspirador, sem uso de produtos abrasivos. Ao receber seu produto, fornecemos todas as instruções de cuidado específicas para o material escolhido.",
-
     // Blog list page
     "blog.featured": "Destaque",
     "blog.listTitle": "Dicas da Especialista",
@@ -651,9 +647,9 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // FAQ — Móveis Sob Medida
     "faq.moveis.q1": "Vocês fabricam móveis sob medida para qualquer ambiente?",
-    "faq.moveis.a1": "Sim! Projetamos e fabricamos móveis sob medida para sala, quarto, closet, escritório e home office. Cada projeto é desenvolvido para aproveitar ao máximo o espaço disponível e refletir o estilo do cliente.",
+    "faq.moveis.a1": "Sim! Projetamos e fabricamos móveis sob medida para o ambiente que você precisar. Cada projeto é desenvolvido exclusivamente para o cliente de acordo com a necessidade e DNA desejado.",
     "faq.moveis.q2": "Qual é o prazo de fabricação e instalação dos móveis?",
-    "faq.moveis.a2": "O prazo médio é de 30 a 45 dias úteis após a aprovação do projeto e confirmação do pedido. Projetos maiores ou com materiais especiais podem ter prazos diferentes, sempre informados com antecedência. A instalação é inclusa.",
+    "faq.moveis.a2": "O prazo médio é de 25 a 45 dias úteis após a aprovação, a depender da demanda e urgência do cliente, a ser combinado previamente com o cliente. Projetos maiores e com materiais especiais podem ter prazos diferentes.",
     "faq.moveis.q3": "Quais materiais vocês utilizam nos móveis planejados?",
     "faq.moveis.a3": "Trabalhamos com MDF de alta qualidade, MDP, madeira maciça e acabamentos em laminado, melamínico, laca e revestimentos especiais. Todos os materiais seguem normas de qualidade e durabilidade para garantir móveis bonitos e resistentes.",
     "faq.moveis.q4": "É possível integrar iluminação LED nos móveis planejados?",
@@ -928,7 +924,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // Footer
     "footer.desc":
-      "For over 20 years transforming spaces with curtains, blinds, wallpaper and custom rugs.",
+      "For over 20 years transforming spaces with curtains, blinds, wallpaper, rugs, cushions and custom furniture.",
     "footer.excellence": "20 years of excellence",
     "footer.products": "Products",
     "footer.institutional": "Company",
@@ -1136,7 +1132,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // Map Section
     "map.label": "Location",
-    "map.title": "Where We Are Located",
+    "map.title": "Location",
     "map.desc":
       "Our store is in Campeche, Florianópolis. Contact us via WhatsApp to ask questions or request a personalized quote.",
     "map.address": "Address",
@@ -1179,10 +1175,6 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "faq.q9": "What is the difference between blinds and curtains?",
     "faq.a9":
       "Blinds are rigid structures (slats, roller fabric, etc.) that provide precise light control and are ideal for functional spaces such as offices and kitchens. Curtains are made of fabric, providing lightness and sophistication, and are very versatile in living rooms and bedrooms. The ideal choice depends on style and needs — our consultant helps you decide.",
-    "faq.q10": "How do I maintain my curtains and blinds?",
-    "faq.a10":
-      "Fabric curtains can generally be machine washed on a delicate cycle or hand washed — we advise based on the material. Blinds should be cleaned with a damp cloth or vacuum cleaner, without abrasive products. When you receive your product, we provide all specific care instructions for the chosen material.",
-
     // Blog list page
     "blog.featured": "Featured",
     "blog.listTitle": "Expert Tips",
@@ -1381,9 +1373,9 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // FAQ — Custom Furniture
     "faq.moveis.q1": "Do you make custom furniture for any space?",
-    "faq.moveis.a1": "Yes! We design and manufacture custom furniture for living rooms, bedrooms, closets, offices and home offices. Each project is developed to make the most of the available space and reflect the client's style.",
+    "faq.moveis.a1": "Yes! We design and manufacture custom furniture for any space you need. Each project is developed for the client according to their specific needs and desired style.",
     "faq.moveis.q2": "What is the lead time for manufacturing and installing the furniture?",
-    "faq.moveis.a2": "The average lead time is 30 to 45 business days after project approval and order confirmation. Larger projects or special materials may have different timelines, always communicated in advance. Installation is included.",
+    "faq.moveis.a2": "The average lead time is 20 to 45 business days after approval, depending on demand and the client's urgency, to be agreed upon in advance. Larger projects or with special materials may have different timelines.",
     "faq.moveis.q3": "What materials do you use in planned furniture?",
     "faq.moveis.a3": "We work with high-quality MDF, MDP, solid wood and finishes in laminate, melamine, lacquer and special coatings. All materials meet quality and durability standards to ensure beautiful and resistant furniture.",
     "faq.moveis.q4": "Is it possible to integrate LED lighting into planned furniture?",
@@ -1581,9 +1573,9 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "home.premium.label": "Premium · Presencial",
     "home.premium.title": "Consultoría Presencial Premium",
     "home.premium.desc":
-      "Nuestra especialista va hasta usted con muestrario exclusivo, orienta en la elección de colores y telas, y realiza la medición con precisión milimétrica.",
+      "Nuestra especialista va hasta usted con muestrario, orienta en la elección de colores y telas, y realiza la medición con precisión milimétrica.",
     "home.premium.f1": "Visita técnica en su ambiente",
-    "home.premium.f2": "Muestrario exclusivo llevado hasta usted",
+    "home.premium.f2": "Muestrario llevado hasta usted",
     "home.premium.f3": "Orientación profesional de colores y telas",
     "home.premium.f4": "Medición precisa garantizada",
     "home.premium.f5":
@@ -1659,7 +1651,7 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // Footer
     "footer.desc":
-      "Por más de 20 años transformando ambientes con cortinas, persianas, papel tapiz y alfombras a medida.",
+      "Por más de 20 años transformando ambientes con cortinas, persianas, papel tapiz, alfombras, cojines y mobiliario a medida.",
     "footer.excellence": "20 años de excelencia",
     "footer.products": "Productos",
     "footer.institutional": "Institucional",
@@ -1911,10 +1903,6 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
     "faq.q9": "¿Cuál es la diferencia entre persiana y cortina?",
     "faq.a9":
       "Las persianas son estructuras rígidas (lamas, tela enrollable, etc.) que ofrecen un control preciso de la luz y son ideales para ambientes funcionales como oficinas y cocinas. Las cortinas son de tela, aportan ligereza y sofisticación, y son muy versátiles en salas y dormitorios. Lo ideal para cada espacio depende del estilo y las necesidades — nuestra consultora le ayuda en esa elección.",
-    "faq.q10": "¿Cómo mantengo mis cortinas y persianas?",
-    "faq.a10":
-      "Las cortinas de tela generalmente pueden lavarse a máquina en ciclo delicado o a mano — le orientamos según el material. Las persianas deben limpiarse con un paño húmedo o aspiradora, sin usar productos abrasivos. Al recibir su producto, le proporcionamos todas las instrucciones de cuidado específicas para el material elegido.",
-
     // Blog list page
     "blog.featured": "Destacado",
     "blog.listTitle": "Consejos de la Especialista",
@@ -2113,9 +2101,9 @@ export const NAV_TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // FAQ — Muebles a Medida
     "faq.moveis.q1": "¿Fabrican muebles a medida para cualquier ambiente?",
-    "faq.moveis.a1": "¡Sí! Diseñamos y fabricamos muebles a medida para sala, dormitorio, vestidor, oficina y home office. Cada proyecto se desarrolla para aprovechar al máximo el espacio disponible y reflejar el estilo del cliente.",
+    "faq.moveis.a1": "¡Sí! Diseñamos y fabricamos muebles a medida para el ambiente que usted necesita. Cada proyecto se desarrolla para el cliente de acuerdo con la necesidad y estilo deseado.",
     "faq.moveis.q2": "¿Cuál es el plazo de fabricación e instalación de los muebles?",
-    "faq.moveis.a2": "El plazo medio es de 30 a 45 días hábiles tras la aprobación del proyecto y confirmación del pedido. Proyectos más grandes o con materiales especiales pueden tener plazos diferentes, siempre informados con antelación. La instalación está incluida.",
+    "faq.moveis.a2": "El plazo medio es de 20 a 45 días hábiles tras la aprobación, a depender de la demanda y urgencia del cliente, a combinarse previamente con el cliente. Proyectos más grandes o con materiales especiales pueden tener plazos diferentes.",
     "faq.moveis.q3": "¿Qué materiales utilizan en los muebles a medida?",
     "faq.moveis.a3": "Trabajamos con MDF de alta calidad, MDP, madera maciza y acabados en laminado, melamínico, laca y revestimientos especiales. Todos los materiales cumplen normas de calidad y durabilidad para garantizar muebles bonitos y resistentes.",
     "faq.moveis.q4": "¿Es posible integrar iluminación LED en los muebles a medida?",

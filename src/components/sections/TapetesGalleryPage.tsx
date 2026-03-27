@@ -198,7 +198,20 @@ function StyleSection({
   eager?: boolean;
 }) {
   const { t } = useLanguage();
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+
+  // Flatten all images across all products for sequential navigation
+  const allImages = products.flatMap((product) =>
+    product.images.map((img, i) => ({ src: img.src, alt: `${product.name} ${i + 1}` }))
+  );
+
+  // Precompute starting flat index for each product
+  const productStartIdx: number[] = [];
+  let running = 0;
+  for (const p of products) {
+    productStartIdx.push(running);
+    running += p.images.length;
+  }
 
   return (
     <div id={id} className="pt-2">
@@ -213,7 +226,7 @@ function StyleSection({
 
         {/* Products */}
         <div className="space-y-10">
-          {products.map((product) => (
+          {products.map((product, pi) => (
             <div key={product.name}>
               {/* Product name */}
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-mahogany-light">
@@ -222,33 +235,42 @@ function StyleSection({
 
               {/* Images grid */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 auto-rows-[280px] md:auto-rows-[320px]">
-                {product.images.map((img, i) => (
-                  <button
-                    key={i}
-                    className="relative overflow-hidden rounded-lg group cursor-zoom-in text-left"
-                    onClick={() => setLightbox({ src: img.src, alt: `${product.name} ${i + 1}` })}
-                  >
-                    <img
-                      src={img.src}
-                      alt={`${product.name} ${i + 1}`}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      style={{ objectPosition: img.objectPosition ?? "center" }}
-                      loading={eager && i === 0 ? "eager" : "lazy"}
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                  </button>
-                ))}
+                {product.images.map((img, i) => {
+                  const flatIdx = productStartIdx[pi] + i;
+                  return (
+                    <button
+                      key={i}
+                      className="relative overflow-hidden rounded-lg group cursor-zoom-in text-left"
+                      onClick={() => setLightboxIdx(flatIdx)}
+                    >
+                      <img
+                        src={img.src}
+                        alt={`${product.name} ${i + 1}`}
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        style={{ objectPosition: img.objectPosition ?? "center" }}
+                        loading={eager && flatIdx === 0 ? "eager" : "lazy"}
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                    </button>
+                  );
+                })}
               </div>
             </div>
           ))}
         </div>
       </ScrollReveal>
 
-      {lightbox && (
+      {lightboxIdx !== null && allImages[lightboxIdx] && (
         <ImageLightbox
-          src={lightbox.src}
-          alt={lightbox.alt}
-          onClose={() => setLightbox(null)}
+          src={allImages[lightboxIdx].src}
+          alt={allImages[lightboxIdx].alt}
+          onClose={() => setLightboxIdx(null)}
+          onPrev={() => setLightboxIdx((idx) => (idx! > 0 ? idx! - 1 : idx))}
+          onNext={() => setLightboxIdx((idx) => (idx! < allImages.length - 1 ? idx! + 1 : idx))}
+          hasPrev={lightboxIdx > 0}
+          hasNext={lightboxIdx < allImages.length - 1}
+          current={lightboxIdx + 1}
+          total={allImages.length}
         />
       )}
     </div>

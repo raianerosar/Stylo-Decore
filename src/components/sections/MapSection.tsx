@@ -26,9 +26,6 @@ export function MapSection() {
             {t("map.title")}
           </h2>
           <div className="mx-auto mt-4 h-px w-24 bg-gradient-to-r from-transparent via-primary to-transparent" />
-          <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-foreground/55">
-            {t("map.desc")}
-          </p>
         </motion.div>
 
         {/* Mapa + Info */}

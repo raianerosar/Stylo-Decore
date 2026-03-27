@@ -179,12 +179,12 @@ export const MOVEIS_FAQ = [
   {
     question: "Vocês fabricam móveis sob medida para qualquer ambiente?",
     answer:
-      "Sim! Projetamos e fabricamos móveis sob medida para sala, quarto, closet, escritório e home office. Cada projeto é desenvolvido para aproveitar ao máximo o espaço disponível e refletir o estilo do cliente.",
+      "Sim! Projetamos e fabricamos móveis sob medida para o ambiente que você precisa. Cada projeto é desenvolvido para o cliente de acordo com a necessidade e DNA desejado.",
   },
   {
     question: "Qual é o prazo de fabricação e instalação dos móveis?",
     answer:
-      "O prazo médio é de 30 a 45 dias úteis após a aprovação do projeto e confirmação do pedido. Projetos maiores ou com materiais especiais podem ter prazos diferentes, sempre informados com antecedência. A instalação é inclusa.",
+      "O prazo médio é de 20 a 45 dias úteis após a aprovação, a depender da demanda e urgência do cliente, a ser combinado previamente com o cliente. Projetos maiores e com materiais especiais podem ter prazos diferentes.",
   },
   {
     question: "Quais materiais vocês utilizam nos móveis planejados?",

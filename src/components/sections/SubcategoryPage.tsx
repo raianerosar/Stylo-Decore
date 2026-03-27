@@ -80,7 +80,8 @@ export default function SubcategoryPage({
   const [longPressActive, setLongPressActive] = useState<string | null>(null);
   const longPressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [videoIsPortrait, setVideoIsPortrait] = useState<boolean | null>(true);
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+  const lightboxImages = products.map((p) => ({ src: p.desktopImage || p.image, alt: p.name }));
 
   const videoIconMap = {
     ruler: <Ruler size={28} strokeWidth={1.5} />,
@@ -236,12 +237,7 @@ export default function SubcategoryPage({
             <ScrollReveal key={`${product.name}-${i}`} animation="up" delay={i * 90}>
               <button
                 className="group block w-full cursor-zoom-in text-left"
-                onClick={() =>
-                  setLightbox({
-                    src: product.desktopImage || product.image,
-                    alt: product.name,
-                  })
-                }
+                onClick={() => setLightboxIdx(i)}
                 onTouchStart={() => product.descriptionKey && handleTouchStart(product.name)}
                 onTouchEnd={handleTouchEnd}
                 onTouchCancel={handleTouchEnd}
@@ -520,11 +516,17 @@ export default function SubcategoryPage({
         </div>
       </ScrollReveal>
 
-      {lightbox && (
+      {lightboxIdx !== null && lightboxImages[lightboxIdx] && (
         <ImageLightbox
-          src={lightbox.src}
-          alt={lightbox.alt}
-          onClose={() => setLightbox(null)}
+          src={lightboxImages[lightboxIdx].src}
+          alt={lightboxImages[lightboxIdx].alt}
+          onClose={() => setLightboxIdx(null)}
+          onPrev={() => setLightboxIdx((idx) => (idx! > 0 ? idx! - 1 : idx))}
+          onNext={() => setLightboxIdx((idx) => (idx! < lightboxImages.length - 1 ? idx! + 1 : idx))}
+          hasPrev={lightboxIdx > 0}
+          hasNext={lightboxIdx < lightboxImages.length - 1}
+          current={lightboxIdx + 1}
+          total={lightboxImages.length}
         />
       )}
     </div>

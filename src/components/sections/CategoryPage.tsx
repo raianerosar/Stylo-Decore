@@ -64,7 +64,8 @@ export default function CategoryPage({
   disableLinks,
 }: CategoryPageProps) {
   const { t } = useLanguage();
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string; cover?: boolean } | null>(null);
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+  const lightboxItems = subcategories.map((item) => ({ src: item.cardImage || item.image, alt: item.name, cover: item.lightboxCover }));
   const resolvedTitle = titleKey ? t(titleKey) : title;
   const resolvedHeadline = headlineKey ? t(headlineKey) : headline;
   const resolvedDescription = descriptionKey ? t(descriptionKey) : description;
@@ -175,7 +176,7 @@ export default function CategoryPage({
           <div className="mx-auto max-w-7xl px-6 py-12">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {/* Cards iguais */}
-              {subcategories.map((item) => {
+              {subcategories.map((item, idx) => {
                 const cardContent = (
                   <>
                     <div className="aspect-[3/4] overflow-hidden">
@@ -203,7 +204,7 @@ export default function CategoryPage({
                   <div
                     key={item.href}
                     className="group relative overflow-hidden cursor-zoom-in"
-                    onClick={() => setLightbox({ src: item.cardImage || item.image, alt: item.name, cover: item.lightboxCover })}
+                    onClick={() => setLightboxIdx(idx)}
                   >
                     {cardContent}
                   </div>
@@ -265,8 +266,19 @@ export default function CategoryPage({
         </div>
       </ScrollReveal>
 
-      {lightbox && (
-        <ImageLightbox src={lightbox.src} alt={lightbox.alt} cover={lightbox.cover} onClose={() => setLightbox(null)} />
+      {lightboxIdx !== null && lightboxItems[lightboxIdx] && (
+        <ImageLightbox
+          src={lightboxItems[lightboxIdx].src}
+          alt={lightboxItems[lightboxIdx].alt}
+          cover={lightboxItems[lightboxIdx].cover}
+          onClose={() => setLightboxIdx(null)}
+          onPrev={() => setLightboxIdx((idx) => (idx! > 0 ? idx! - 1 : idx))}
+          onNext={() => setLightboxIdx((idx) => (idx! < lightboxItems.length - 1 ? idx! + 1 : idx))}
+          hasPrev={lightboxIdx > 0}
+          hasNext={lightboxIdx < lightboxItems.length - 1}
+          current={lightboxIdx + 1}
+          total={lightboxItems.length}
+        />
       )}
     </div>
   );
